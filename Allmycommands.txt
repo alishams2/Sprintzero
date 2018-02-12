@@ -1,0 +1,73 @@
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git  status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        distributedgit.txt
+        gettingstarted.txt
+        gitbranching.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git add .
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   distributedgit.txt
+        new file:   gettingstarted.txt
+        new file:   gitbranching.txt
+
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git commit -m "added 3 files"
+[master (root-commit) 605fdf5] added 3 files
+ 3 files changed, 193 insertions(+)
+ create mode 100644 distributedgit.txt
+ create mode 100644 gettingstarted.txt
+ create mode 100644 gitbranching.txt
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git rm gitbranching.txt
+rm 'gitbranching.txt'
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    gitbranching.txt
+
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git commit -m "deleted gitbranching"
+[master 6030885] deleted gitbranching
+ 1 file changed, 102 deletions(-)
+ delete mode 100644 gitbranching.txt
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/Sprintzero (master)
+$ git log
+commit 60308850299998c0c93309d4984a3ecaabbfc488 (HEAD -> master)
+Author: alishams2 <aly97_10@hotmail.com>
+Date:   Mon Feb 12 13:47:09 2018 +0200$
+
+    deleted gitbranching
+
+commit 605fdf5c60881a658d12623c93b45deca346bcbb
+Author: alishams2 <aly97_10@hotmail.com>
+Date:   Mon Feb 12 13:45:22 2018 +0200
+
+    added 3 files
+$ git revert 60308850299998c0c
