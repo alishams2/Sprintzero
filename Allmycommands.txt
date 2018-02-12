@@ -71,3 +71,78 @@ Date:   Mon Feb 12 13:45:22 2018 +0200
 
     added 3 files
 $ git revert 60308850299998c0c
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ git status
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (master)
+$ touch README.md
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (master)
+$ git branch ReadMe
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (master)
+$ git checkout Readme
+Switched to branch 'Readme'
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ gti status
+bash: gti: command not found
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ git status
+On branch Readme
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ git add README.md
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ git status
+On branch Readme
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   README.md
+
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ git checkout master
+Switched to branch 'master'
+A       README.md
+Your branch is up to date with 'origin/master'.
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (master)
+$ git merge Readme
+Already up to date.
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (master)
+$ git checkout Readme
+Switched to branch 'Readme'
+A       README.md
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ git status
+On branch Readme
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   README.md
+
+
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Readme)
+$ git commit -m "added file README.md"
+[Readme d6cbf3b] added file README.md
+ 1 file changed, 7 insertions(+)
+ create mode 100644 README.md
+lenovo@DESKTOP-F19J055 MINGW64 ~/sprintZero (Master)
+$ git merge Readme
+Updating 94a02d1..d6cbf3b
+Fast-forward
+ README.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 README.md
+
